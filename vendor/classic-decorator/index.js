@@ -1,6 +1,6 @@
 'use strict';
 
-/* globals Ember, define */
+/* globals define */
 (function(global) {
   var OWN_CLASSES = new WeakMap();
   var HAS_CONSTRUCTOR = new WeakMap();
@@ -9,6 +9,8 @@
   var IS_PERMA_CLASSIC = new WeakMap();
   global.__CLASSIC_HAS_CONSTRUCTOR__ = HAS_CONSTRUCTOR;
   global.__CLASSIC_OWN_CLASSES__ = OWN_CLASSES;
+
+  var Ember = window.require('ember').default;
 
   IS_PERMA_CLASSIC.set(Ember.Object, true);
   IS_PERMA_CLASSIC.set(Ember.Component, true);
